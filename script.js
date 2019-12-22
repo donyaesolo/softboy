@@ -55,7 +55,7 @@ function playMusic () {
   }, 2000)
   song.innerHTML = 'Song Title: Bossa No Se'
   artist.innerHTML = 'By: Cuco'
-  if (songPlayer.src === 'http://127.0.0.1:3000/audio/Bossa%20No%20Se.mp3') {
+  if (songPlayer.src === 'github.io/softboy/audio/Bossa%20No%20Se.mp3') {
     setInterval(function () {
       if (songPlayer.currentTime >= 14.5) {
         leftCol.style.background = 'white'
