@@ -184,6 +184,49 @@ div.clickEffect{
   }
 }
 
+.cliche{
+  animation: purplePink 4s infinite;
+}
+.clicheText{
+  -webkit-animation: purplePinkText 4s  infinite;
+}
+.clicheLine{
+  -webkit-animation: purplePinkLine 4s  infinite;
+}
+@keyframes purplePink {
+  0%{
+    background: #EBF0FF;
+  }
+  50%{
+    background-color: #FFD1DC;
+  }
+  100%{
+    background: #EBF0FF;
+  }
+}
+@keyframes purplePinkText {
+  0%{
+    color: #EBF0FF;
+  }
+  50%{
+    color: #FFD1DC;
+  }
+  100%{
+    color: #EBF0FF;
+  }
+}
+@keyframes purplePinkLine {
+  0%{
+    border: 5px #EBF0FF solid;
+  }
+  50%{
+    border: 5px #FFD1DC solid;
+  }
+  100%{
+    border: 5px #EBF0FF solid;
+  }
+}
+
 @keyframes clickEffect{
   0%{
     border-color: #FFD2D1;
@@ -298,11 +341,26 @@ div.clickEffect{
 
 }
 @media screen and (max-height: 740px){
-
   .click{
     margin-top: -20%;
   }
-
+}
+@media screen and (max-height: 414px){
+  body{
+    overflow: hidden;
+  }
+  .line-left{
+    margin-top: -10%;
+  }
+  .line{
+    margin-top: -10%;
+  }
+  .click{
+    margin-top: -30%;
+  }
+  .ck{
+    margin-top: -30%;
+  }
 }
 @media screen and (max-width: 410px){
 

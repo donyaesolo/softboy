@@ -2,6 +2,8 @@ var song = document.getElementById('songTitle')
 var artist = document.getElementById('artist')
 var holder = document.getElementsByClassName('popup')
 var songPlayer = document.getElementById('audio')
+var leftImgHolder = document.getElementsByClassName('img')[0]
+var rightImgHolder = document.getElementsByClassName('img')[1]
 var leftCol = document.getElementsByClassName('large-col')[0]
 var rightCol = document.getElementsByClassName('large-col')[1]
 var leftLine = document.getElementsByClassName('right-line')[0]
@@ -44,9 +46,20 @@ function playMusic () {
   setInterval(function () {
     if (windowSize.matches) {
       boy.style.transition = 'ease 1s'
-      boy.style.marginTop = '-10%'
+      boy.style.marginTop = '-15%'
+      leftImgHolder.style.transition = 'ease 1s'
+      leftImgHolder.style.height = '50%'
+      rightImgHolder.style.marginTop = '-20%'
+      rightImgHolder.style.transition = 'ease 1s'
+      rightImgHolder.style.height = '50%'
     } else {
+      leftImgHolder.style.transition = 'ease 1s'
+      leftImgHolder.style.height = '50%'
+      rightImgHolder.style.marginTop = '-20%'
+      rightImgHolder.style.transition = 'ease 1s'
+      rightImgHolder.style.height = '50%'
       boy.style.marginTop = '0%'
+      rightImgHolder.style.marginTop = '0%'
     }
   }, 100)
   holder[0].style.left = '80%'
@@ -55,26 +68,6 @@ function playMusic () {
   }, 2000)
   song.innerHTML = 'Song Title: Bossa No Se'
   artist.innerHTML = 'By: Cuco'
-  if (songPlayer.src === 'https://donyaesolo.github.io/softboy/audio/Bossa%20No%20Se.mp3') {
-    setInterval(function () {
-      if (songPlayer.currentTime >= 14.5) {
-        leftCol.style.background = 'white'
-        rightCol.style.background = '#EBFAFF'
-        leftLine.style.borderColor = '#EBFAFF'
-        rightLine.style.borderColor = 'white'
-        soft.style.color = '#EBFAFF'
-        soft.style.transition = '0s'
-        boy.style.transition = '0s'
-        boy.style.color = 'white'
-        leftImg.src = 'images/soft3.png'
-        rightImg.src = 'images/soft4.jpg'
-      } if (songPlayer.currentTime >= 43) {
-        soft.classList.add('bossaText')
-        leftLine.classList.add('bossaLine')
-        rightCol.classList.add('bossa')
-      }
-    }, 50)
-  }
 }
 
 var currentSong = 0
@@ -101,10 +94,32 @@ function audio () {
       $('#audio')[0].src = $('#playlist li a')[currentSong].href
       $('#audio')[0].play()
   })
-  console.log(songPlayer.src)
+  if (songPlayer.src === 'https://donyaesolo.github.io/softboy/audio/Bossa%20No%20Se.mp3') {
+    bossa = setInterval(function () {
+      if (songPlayer.currentTime >= 14.5) {
+        leftCol.style.background = 'white'
+        rightCol.style.background = '#EBFAFF'
+        leftLine.style.borderColor = '#EBFAFF'
+        rightLine.style.borderColor = 'white'
+        soft.style.color = '#EBFAFF'
+        soft.style.transition = '0s'
+        boy.style.transition = '0s'
+        boy.style.color = 'white'
+        leftImg.src = 'images/soft3.png'
+        rightImg.src = 'images/soft4.jpg'
+      } if (songPlayer.currentTime >= 43) {
+        soft.classList.add('bossaText')
+        leftLine.classList.add('bossaLine')
+        rightCol.classList.add('bossa')
+      }
+    }, 50)
+  } else {
+  }
 }
+var bossa
 function check () {
   if (currentSong === 0) {
+    clearInterval(bossa)
     soft.classList.remove('bossaText')
     leftLine.classList.remove('bossaLine')
     rightCol.classList.remove('bossa')
@@ -127,6 +142,10 @@ function check () {
         boy.style.color = '#EBF0FF'
         leftImg.src = 'images/soft5.jpg'
         rightImg.src = 'images/soft6.jpg'
+      } if (songPlayer.currentTime >= 32) {
+        boy.classList.add('clicheText')
+        leftCol.classList.add('cliche')
+        rightLine.classList.add('clicheLine')
       }
     }, 50)
   } else if (currentSong === 1) {
