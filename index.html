@@ -5,22 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <audio id = "audio" src = ""></audio>
-    <ul id = "playlist">
-      <li class = "current-song"><a href = "audio/Bossa No Se.mp3"></a></li>
-      <li><a href = "audio/Cliche.mp3"></a></li>
-      <li><a href = "audio/Boys Will Be Bugs.mp3"></a></li>
-      <li><a href = "audio/Chinese New Year.mp3"></a></li>
-      <li><a href = "audio/Bubble Gum.mp3"></a></li>
-      <li><a href = "audio/falling.mp3"></a></li>
-      <li><a href = "audio/I Don't KNow My Name.mp3"></a></li>
-      <li><a href = "audio/october.mp3"></a></li>
-      <li><a href = "audio/Ultimently.mp3"></a></li>
-      <li><a href = "audio/Walk But In A Garden.mp3"></a></li>
-      <li><a href = "audio/Water Fountain.mp3"></a></li>
-    </ul>
   </head>
   <body>
+    <div class = "playlist">
+      <h1 class = "titleSoft">Soft Boy Playlist</h1>
+      <ul id = "playlist">
+        <li class = "current-song"><a onclick = "bossaNo()" href = "audio/Bossa No Se.mp3">Bosaa No Se</a></li>
+        <li><a href = "audio/Cliche.mp3" onclick = "cliche()">Cliche</a></li>
+        <li><a href = "audio/Boys Will Be Bugs.mp3" onclick = "boys()">Boys Will Be Bugs</a></li>
+        <li><a href = "audio/Chinese New Year.mp3" onclick = "chinese()">Chinese New Year</a></li>
+        <li><a href = "audio/Bubble Gum.mp3" onclick = "bubble()">Bubble Gum</a></li>
+        <li><a href = "audio/falling.mp3" onclick = "falling()">Falling For U</a></li>
+        <li><a href = "audio/I Don't Know My Name.mp3" onclick = "dontKnow()">I Don't Know My Name</a></li>
+        <li><a href = "audio/october.mp3" onclick = "october()">We Fell In Love In October</a></li>
+        <li><a href = "audio/Ultimently.mp3" onclick = "ultimently()">Ultimently</a></li>
+        <li><a href = "audio/Walk But In A Garden.mp3" onclick = "garden()">Walk But In A Garden</a></li>
+        <li><a href = "audio/Water Fountain.mp3" onclick = "fountain()">Water Fountain</a></li>
+      </ul>
+    </div>
     <div class = "large-col pink">
+      <img class = "menu" onclick = "playlistMenu()" src = "images/menu.png" />
       <div class = "title">
         <h1 class = "left">Soft</h1>
       </div>

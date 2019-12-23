@@ -56,8 +56,42 @@ img{
 .contain-img.right{
   margin-left: 0%;
 }
+.playlist{
+  background: white;
+  position: fixed;
+  z-index: 2;
+  right: 100%;
+  width: 25%;
+  height: 100%;
+}
+#playlist{
+  padding-left: 0;
+  display: block;
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+li{
+  padding: 20px;
+  font-size: 20px;
+  font-family: Adam;
+
+}
+.current-song{
+  color: white;
+  background: pink;
+}
+.menu{
+  opacity: 0;
+  position: fixed;
+  max-height: 10%;
+  max-width: 10%
+}
 
 h1{
+  color: #FFD1DC;
   font-family: Lemon Milk;
   padding: 0;
   margin: 0;
@@ -84,6 +118,9 @@ h1{
   color: white;
   font-size: 600%;
   padding-right: 50%;
+}
+.titleSoft {
+  padding-left: 5px;
 }
 .back{
   background: white;
@@ -334,13 +371,37 @@ div.clickEffect{
 
 }
 @media screen and (max-width: 420px){
-
+  .menu{
+    position: fixed;
+    z-index: 2;
+  }
+  #playlist{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  li{
+    width: 25%;
+    padding: 15px;
+    font-size: 15px;
+  }
+  .playlist{
+    right: 0%;
+    bottom: 100%;
+    height: 40%;
+    width: 100%;
+  }
   .ck{
     margin-top: -109%;
   }
 
 }
 @media screen and (max-height: 740px){
+  .playlist{
+    right: 0%;
+    bottom: 100%;
+    height: 45%;
+    width: 100%;
+  }
   .click{
     margin-top: -20%;
   }
